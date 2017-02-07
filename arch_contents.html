@@ -1,0 +1,772 @@
+<html>
+ <head>
+  <title>Perl中文参考手册.chm</title>
+  <LINK rel="Stylesheet" type="text/css" href="arch_css.css">
+</head>
+
+<body onload="setInterval('getLoc()', 500);">    
+<script>
+var lastDoc;
+var contents = 
+[
+ ["Perl中文参考手册", "default_topic.html", "1", 
+   ["第零章 Perl 前言", "perl/p3preface.html#perl", "1", 
+     ["1. 追求幸福", "perl/p3preface.html#1", "1"], 
+     ["2. 这个版本有什么新东西", "perl/p3preface.html#2", "1"], 
+     ["3. 标准的发布版", "perl/p3preface.html#3", "1"], 
+     ["4. 在线文档", "perl/p3preface.html#4", "1"], 
+     ["5. 阅读标准手册页", "perl/p3preface.html#5", "1"], 
+     ["6. 搜索手册页", "perl/p3preface.html#6", "1"], 
+     ["7. 非 Perl 手册页", "perl/p3preface.html#7_perl", "1"], 
+     ["8. 离线文档", "perl/p3preface.html#8", "1"], 
+     ["9. 其它资源", "perl/p3preface.html#9", "1", 
+       ["9.1 Web 上的 Perl", "perl/p3preface.html#9_1_web_perl", "1"], 
+       ["9.2 Usenet 新闻组", "perl/p3preface.html#9_2_usenet", "1"]], 
+     ["10. 臭虫报告", "perl/p3preface.html#10", "1"], 
+     ["11. 这本书里用的习惯", "perl/p3preface.html#11", "1"], 
+     ["12. 感谢", "perl/p3preface.html#12", "1"]], 
+   ["第一章 Perl 概述", "perl/anoverviewofperl.html#perl", "1", 
+     ["1.1 从头开始", "perl/anoverviewofperl.html#1_1", "1"], 
+     ["1.2 自然语言与人工语言", "perl/anoverviewofperl.html#1_2", "1", 
+       ["1.2.1 变量语法", "perl/anoverviewofperl.html#1_2_1", "1"], 
+       ["1.2.2 单数变量", "perl/anoverviewofperl.html#1_2_2", "1"], 
+       ["1.2.3 复数变量", "perl/anoverviewofperl.html#1_2_3", "1"], 
+       ["1.2.4 复杂数据结构", "perl/anoverviewofperl.html#1_2_4", "1"], 
+       ["1.2.5 简单数据结构", "perl/anoverviewofperl.html#1_2_5", "1"], 
+       ["1.2.6 动词", "perl/anoverviewofperl.html#1_2_6", "1"]], 
+     ["1.3 一个平均值例子", "perl/anoverviewofperl.html#1_3", "1", 
+       ["1.3.1 如何运行", "perl/anoverviewofperl.html#1_3_1", "1"]], 
+     ["1.4 文件句柄", "perl/anoverviewofperl.html#1_4", "1"], 
+     ["1.5 操作符", "perl/anoverviewofperl.html#1_5", "1", 
+       ["1.5.1 双目算术操作符", "perl/anoverviewofperl.html#1_5_1", "1"], 
+       ["1.5.2 字符串操作符", "perl/anoverviewofperl.html#1_5_2", "1"], 
+       ["1.5.3 赋值操作符", "perl/anoverviewofperl.html#1_5_3", "1"], 
+       ["1.5.4 单目算术操作符", "perl/anoverviewofperl.html#1_5_4", "1"], 
+       ["1.5.5 逻辑操作符", "perl/anoverviewofperl.html#1_5_5", "1"], 
+       ["1.5.6 比较操作符", "perl/anoverviewofperl.html#1_5_6", "1"], 
+       ["1.5.7 文件测试操作符", "perl/anoverviewofperl.html#1_5_7", "1"]], 
+     ["1.6 流程控制", "perl/anoverviewofperl.html#1_6", "1", 
+       ["1.6.1 什么是真", "perl/anoverviewofperl.html#1_6_1", "1"], 
+       ["1.6.2 If 和 unless 语句", "perl/anoverviewofperl.html#1_6_2_if_unless", "1"], 
+       ["1.6.3 循环", "perl/anoverviewofperl.html#1_6_3", "1", 
+         ["1.6.3.1 while 和 until 语句", "perl/anoverviewofperl.html#1_6_3_1_while_until", "1"], 
+         ["1.6.3.2 for 语句", "perl/anoverviewofperl.html#1_6_3_2_for", "1"], 
+         ["1.6.3.3 foreach 语句", "perl/anoverviewofperl.html#1_6_3_3_foreach", "1"], 
+         ["1.6.3.4 跳出控制结构: next 和 last", "perl/anoverviewofperl.html#1_6_3_4_next_last", "1"]]], 
+     ["1.7 正则表达式", "perl/anoverviewofperl.html#1_7", "1", 
+       ["1.7.1 量词", "perl/anoverviewofperl.html#1_7_1", "1"], 
+       ["1.7.2 最小匹配", "perl/anoverviewofperl.html#1_7_2", "1"], 
+       ["1.7.3 把钉子敲牢", "perl/anoverviewofperl.html#1_7_3", "1"], 
+       ["1.7.4 反引用", "perl/anoverviewofperl.html#1_7_4", "1"]], 
+     ["1.8 列表处理", "perl/anoverviewofperl.html#1_8", "1"], 
+     ["1.9 你不知道但不伤害你的东西(很多)", "perl/anoverviewofperl.html#1_9", "1"]], 
+   ["第二章 集腋成裘", "perl/perlperlbitsandpieces.html#.html", "1", 
+     ["2.1 原子", "perl/perlperlbitsandpieces.html#2_1", "1"], 
+     ["2.2 分子", "perl/perlperlbitsandpieces.html#2_2", "1"], 
+     ["2.3 内置的数据类型", "perl/perlperlbitsandpieces.html#2_3", "1"], 
+     ["2.4 变量", "perl/perlperlbitsandpieces.html#2_4", "1"], 
+     ["2.5 名字", "perl/perlperlbitsandpieces.html#2_5", "1", 
+       ["2.5.1 名字查找", "perl/perlperlbitsandpieces.html#2_5_1", "1"]], 
+     ["2.6 标量值", "perl/perlperlbitsandpieces.html#2_6", "1", 
+       ["2.6.1 数字文本", "perl/perlperlbitsandpieces.html#2_6_1", "1"], 
+       ["2.6.2 字串文本", "perl/perlperlbitsandpieces.html#2_6_2", "1"], 
+       ["2.6.3 选择自己的引号", "perl/perlperlbitsandpieces.html#2_6_3", "1"], 
+       ["2.6.4 要么就完全不管引起", "perl/perlperlbitsandpieces.html#2_6_4", "1"], 
+       ["2.6.5 代换数组数值", "perl/perlperlbitsandpieces.html#2_6_5", "1"], 
+       ["2.6.6“此处”文档", "perl/perlperlbitsandpieces.html#2_6_6", "1"], 
+       ["2.6.7 V-字串文本", "perl/perlperlbitsandpieces.html#2_6_7_v", "1"], 
+       ["2.6.8 其他文本记号", "perl/perlperlbitsandpieces.html#2_6_8", "1"]], 
+     ["2.7 环境", "perl/perlperlbitsandpieces.html#2_7", "1", 
+       ["2.7.1 标量和列表环境", "perl/perlperlbitsandpieces.html#2_7_1", "1"], 
+       ["2.7.2 布尔环境", "perl/perlperlbitsandpieces.html#2_7_2", "1"], 
+       ["2.7.3 空（void）环境", "perl/perlperlbitsandpieces.html#2_7_3_void", "1"], 
+       ["2.7.4 代换环境", "perl/perlperlbitsandpieces.html#2_7_4", "1"]], 
+     ["2.8 列表值和数组", "perl/perlperlbitsandpieces.html#2_8", "1", 
+       ["2.8.1 列表赋值", "perl/perlperlbitsandpieces.html#2_8_1", "1"], 
+       ["2.7.6 数组长度", "perl/perlperlbitsandpieces.html#2_7_6", "1"]], 
+     ["2.9 散列", "perl/perlperlbitsandpieces.html#2_9", "1"], 
+     ["2.10 型团（typeglob）和文件句柄", "perl/perlperlbitsandpieces.html#2_10_typeglob", "1"], 
+     ["2.11 输入操作符", "perl/perlperlbitsandpieces.html#2_11", "1", 
+       ["2.11.1 命令输入（反勾号）操作符", "perl/perlperlbitsandpieces.html#2_11_1", "1"], 
+       ["2.11.2 行输入（尖角）操作符", "perl/perlperlbitsandpieces.html#2_11_2", "1"], 
+       ["2.11.3 文件名聚集操作符", "perl/perlperlbitsandpieces.html#2_11_3", "1"]]], 
+   ["第三章 单目和双目操作符", "perl/perlunaryandbinaryoperators.html#.html", "1", 
+     ["3.1 项和列表操作符（左向）", "perl/perlunaryandbinaryoperators.html#3_1", "1"], 
+     ["3.2 箭头操作符", "perl/perlunaryandbinaryoperators.html#3_2", "1"], 
+     ["3.3 自增和自减操作符", "perl/perlunaryandbinaryoperators.html#3_3", "1"], 
+     ["3.4 指数运算", "perl/perlunaryandbinaryoperators.html#3_4", "1"], 
+     ["3.5 表意单目操作符", "perl/perlunaryandbinaryoperators.html#3_5", "1"], 
+     ["3.6 绑定操作符", "perl/perlunaryandbinaryoperators.html#3_6", "1"], 
+     ["3.7 乘号操作符", "perl/perlunaryandbinaryoperators.html#3_7", "1"], 
+     ["3.8 附加操作符", "perl/perlunaryandbinaryoperators.html#3_8", "1"], 
+     ["3.9 移位操作符", "perl/perlunaryandbinaryoperators.html#3_9", "1"], 
+     ["3.10 命名单目操作符和文件测试操作符", "perl/perlunaryandbinaryoperators.html#3_10", "1"], 
+     ["3.11 关系操作符", "perl/perlunaryandbinaryoperators.html#3_11", "1"], 
+     ["3.12 相等操作符", "perl/perlunaryandbinaryoperators.html#3_12", "1"], 
+     ["3.13 位操作符", "perl/perlunaryandbinaryoperators.html#3_13", "1"], 
+     ["3.14  C 风格的逻辑（短路）操作符", "perl/perlunaryandbinaryoperators.html#3_14_c", "1"], 
+     ["3.15 范围操作符", "perl/perlunaryandbinaryoperators.html#3_15", "1"], 
+     ["3.16 条件操作符", "perl/perlunaryandbinaryoperators.html#3_16", "1"], 
+     ["3.16 赋值操作符", "perl/perlunaryandbinaryoperators.html#3_16", "1"], 
+     ["3.18 逗号操作符", "perl/perlunaryandbinaryoperators.html#3_18", "1"], 
+     ["3.19 列表操作符（右向）", "perl/perlunaryandbinaryoperators.html#3_19", "1"], 
+     ["3.20 逻辑与，或，非和异或", "perl/perlunaryandbinaryoperators.html#3_20", "1"], 
+     ["3.21 Perl 里没有的 C 操作符", "perl/perlunaryandbinaryoperators.html#3_21_perl_c", "1"]], 
+   ["第四章 语句和声明", "perl/statementsanddeclarations.html#.html", "1", 
+     ["4.1简单语句", "perl/statementsanddeclarations.html#4_1", "1"], 
+     ["4.2混合语句", "perl/statementsanddeclarations.html#4_2", "1", 
+       ["4.2.1 if 和 else 语句", "perl/statementsanddeclarations.html#4_2_1_if_else", "1"]], 
+     ["4.3 循环语句", "perl/statementsanddeclarations.html#4_3", "1", 
+       ["4.3.1 while 和 until 语句", "perl/statementsanddeclarations.html#4_3_1_while_until", "1"], 
+       ["4.3.2 for循环", "perl/statementsanddeclarations.html#4_3_2_for", "1"], 
+       ["4.3.3 foreach 循环", "perl/statementsanddeclarations.html#4_3_3_foreach", "1"], 
+       ["4.3.4 循环控制", "perl/statementsanddeclarations.html#4_3_4", "1"]], 
+     ["4.4 光块", "perl/statementsanddeclarations.html#4_4", "1", 
+       ["4.4.1 分支（case）结构", "perl/statementsanddeclarations.html#4_4_1_case", "1"]], 
+     ["4.5 goto", "perl/statementsanddeclarations.html#4_5_goto", "1"], 
+     ["4.6 全局声明", "perl/statementsanddeclarations.html#4_6", "1"], 
+     ["4.7 范围声明", "perl/statementsanddeclarations.html#4_7", "1", 
+       ["4.7.1 范围变量声明", "perl/statementsanddeclarations.html#4_7_1", "1"], 
+       ["4.7.2 词法范围的变量：my", "perl/statementsanddeclarations.html#4_7_2_my", "1"], 
+       ["4.7.3 词法范围全局声明：our", "perl/statementsanddeclarations.html#4_7_3_our", "1"], 
+       ["4.7.4 动态范围变量：local", "perl/statementsanddeclarations.html#4_7_4_local", "1"]], 
+     ["4.8 用法（pragmas）", "perl/statementsanddeclarations.html#4_8_pragmas", "1", 
+       ["4.8.1控制警告", "perl/statementsanddeclarations.html#4_8_1", "1"], 
+       ["4.8.2 控制全局变量的使用", "perl/statementsanddeclarations.html#4_8_2", "1"]]], 
+   ["第五章 模式匹配", "perl/patternmatching.html#.html", "1", 
+     ["5.1 正则表达式箴言", "perl/patternmatching.html#5_1", "1"], 
+     ["5.2 模式匹配操作符", "perl/patternmatching.html#5_2", "1", 
+       ["5.2.1 模式修饰词", "perl/patternmatching.html#5_2_1", "1"], 
+       ["5.2.2 m// 操作符（匹配）", "perl/patternmatching.html#5_2_2_m", "1"], 
+       ["5.2.3 s/// 操作符（替换）", "perl/patternmatching.html#5_2_3_s", "1", 
+         ["5.2.3.1 顺便修改一下字串", "perl/patternmatching.html#5_2_3_1", "1"], 
+         ["5.2.3.2 当全局替换不够“全局”地时候", "perl/patternmatching.html#5_2_3_2", "1"]], 
+       ["5.2.4 tr/// 操作符（转换）", "perl/patternmatching.html#5_2_4_tr", "1"]], 
+     ["5.3 元字符和元符号", "perl/patternmatching.html#5_3", "1", 
+       ["5.3.1 元字符表", "perl/patternmatching.html#5_3_1", "1"], 
+       ["5.3.2 特定的字符", "perl/patternmatching.html#5_3_2", "1"], 
+       ["5.3.3 通配元符号", "perl/patternmatching.html#5_3_3", "1"]], 
+     ["5.4 字符表", "perl/patternmatching.html#5_4", "1", 
+       ["5.4.1 客户化字符表", "perl/patternmatching.html#5_4_1", "1"], 
+       ["5.4.2 典型 Perl 字符表缩写", "perl/patternmatching.html#5_4_2_perl", "1"], 
+       ["5.4.3 Unicode 属性", "perl/patternmatching.html#5_4_3_unicode", "1", 
+         ["5.4.3.1 Perl 的 Unicode 属性", "perl/patternmatching.html#5_4_3_1_perl_unicode", "1"], 
+         ["5.4.3.2  标准的 Unicode 属性", "perl/patternmatching.html#5_4_3_2_unicode", "1"]]]], 
+   ["第六章 子过程", "perl/subroutines.html#.html", "1", 
+     ["1.0 语法", "perl/subroutines.html#1_0", "1"], 
+     ["2.0 语意", "perl/subroutines.html#2_0", "1", 
+       ["2.1 参数列表的技巧", "perl/subroutines.html#2_1", "1"], 
+       ["2.2 错误指示", "perl/subroutines.html#2_2", "1"], 
+       ["2.3 范围问题", "perl/subroutines.html#2_3", "1"]], 
+     ["3.0 传入引用", "perl/subroutines.html#3_0", "1"], 
+     ["4.0  函数原型", "perl/subroutines.html#4_0", "1", 
+       ["4.1 内联常量函数", "perl/subroutines.html#4_1", "1"], 
+       ["4.2 谨慎使用函数原型", "perl/subroutines.html#4_2", "1"]], 
+     ["5.0 子过程属性", "perl/subroutines.html#5_0", "1", 
+       ["5.1 Locked 和 method 属性", "perl/subroutines.html#5_1_locked_method", "1"], 
+       ["5.3 左值属性", "perl/subroutines.html#5_3", "1"]]], 
+   ["第七章 格式", "perl/formats.html#.html", "1", 
+     ["7.1.0 格式变量", "perl/formats.html#7_1_0", "1"], 
+     ["7.2.0  页脚", "perl/formats.html#7_2_0", "1", 
+       ["7.2.1 访问格式的内部", "perl/formats.html#7_2_1", "1"]]], 
+   ["第八章，引用", "perl/references.html#.html", "1", 
+     ["8.1 什么是引用？", "perl/references.html#8_1", "1"], 
+     ["8.2 创建引用", "perl/references.html#8_2", "1", 
+       ["8.2.1 反斜杠操作符", "perl/references.html#8_2_1", "1"], 
+       ["8.2.2 匿名数据", "perl/references.html#8_2_2", "1", 
+         ["8.2.2.1 匿名数组组合器", "perl/references.html#8_2_2_1", "1"], 
+         ["8.2.2.2 匿名散列组合器", "perl/references.html#8_2_2_2", "1"], 
+         ["8.2.2.3 匿名子过程组合器", "perl/references.html#8_2_2_3", "1"]], 
+       ["8.2.3 对象构造器", "perl/references.html#8_2_3", "1"], 
+       ["8.2.4 句柄引用", "perl/references.html#8_2_4", "1"], 
+       ["8.2.5 符号表引用", "perl/references.html#8_2_5", "1"], 
+       ["8.2.6 引用的隐含创建", "perl/references.html#8_2_6", "1"]], 
+     ["8.3 使用硬引用", "perl/references.html#8_3", "1"], 
+     ["8.3.1 把一个变量当作变量名使用", "perl/references.html#8_3_1", "1"], 
+     ["8.3.2 把一个 BLOCK 块当作变量名用", "perl/references.html#8_3_2_block", "1"], 
+     ["8.3.3 使用箭头操作符", "perl/references.html#8_3_3", "1"], 
+     ["8.3.4 使用对象方法", "perl/references.html#8_3_4", "1"], 
+     ["8.3.5 伪散列", "perl/references.html#8_3_5", "1"], 
+     ["8.3.6 硬引用可以用的其他技巧", "perl/references.html#8_3_6", "1"], 
+     ["8.3.7 闭合（闭包）", "perl/references.html#8_3_7", "1", 
+       ["8.3.7.1 用闭合做函数模板", "perl/references.html#8_3_7_1", "1"], 
+       ["8.3.7.2 嵌套的子过程", "perl/references.html#8_3_7_2", "1"]], 
+     ["8.4 符号引用", "perl/references.html#8_4", "1"], 
+     ["8.5 花括弧，方括弧和引号", "perl/references.html#8_5", "1", 
+       ["8.5.1 引用不能当作散列键字用", "perl/references.html#8_5_1", "1"], 
+       ["8.5.2 垃圾收集，循环引用和弱引用", "perl/references.html#8_5_2", "1"]]], 
+   ["第九章，数据结构", "perl/datastructures.html#.html", "1", 
+     ["9.1 数组的数组", "perl/datastructures.html#9_1", "1", 
+       ["9.1.1 创建和访问一个两维数组", "perl/datastructures.html#9_1_1", "1"], 
+       ["9.1.2 自行生长", "perl/datastructures.html#9_1_2", "1"], 
+       ["9.1.3 访问和打印", "perl/datastructures.html#9_1_3", "1"], 
+       ["9.1.4 片段", "perl/datastructures.html#9_1_4", "1"], 
+       ["9.1.5 常见错误", "perl/datastructures.html#9_1_5", "1"]], 
+     ["9.2 数组的散列", "perl/datastructures.html#9_2", "1", 
+       ["9.2.1 数组的散列的组成", "perl/datastructures.html#9_2_1", "1"], 
+       ["9.2.2 生成数组的散列", "perl/datastructures.html#9_2_2", "1"], 
+       ["9.2.3 访问和打印数组的散列", "perl/datastructures.html#9_2_3", "1"]], 
+     ["9.3 散列的数组", "perl/datastructures.html#9_3", "1", 
+       ["9.3.1 组成一个散列的数组", "perl/datastructures.html#9_3_1", "1"], 
+       ["9.3.2 生成散列的数组", "perl/datastructures.html#9_3_2", "1"], 
+       ["9.3.3 访问和打印散列的数组", "perl/datastructures.html#9_3_3", "1"]], 
+     ["9.4 散列的散列", "perl/datastructures.html#9_4", "1", 
+       ["9.4.1 构成一个散列的散列", "perl/datastructures.html#9_4_1", "1"], 
+       ["9.4.2 生成散列的散列", "perl/datastructures.html#9_4_2", "1"], 
+       ["9.4.3 访问和打印散列的散列", "perl/datastructures.html#9_4_3", "1"]], 
+     ["9.5 函数的散列", "perl/datastructures.html#9_5", "1"], 
+     ["9.6 更灵活的记录", "perl/datastructures.html#9_6", "1", 
+       ["9.6.1 更灵活的记录的组合，访问和打印", "perl/datastructures.html#9_6_1", "1"], 
+       ["9.6.2 甚至更灵活的记录的组合，访问和打印", "perl/datastructures.html#9_6_2", "1"], 
+       ["9.6.3 复杂记录散列的生成", "perl/datastructures.html#9_6_3", "1"]], 
+     ["9.7 保存数据结构", "perl/datastructures.html#9_7", "1"]], 
+   ["第十章 包", "perl/packages.html#.html", "1", 
+     ["10.1 符号表", "perl/packages.html#10_1", "1"], 
+     ["10.2 自动装载", "perl/packages.html#10_2", "1"]], 
+   ["第十一章 模块", "perl/modules.html#.html", "1", 
+     ["11.1 使用模块", "perl/modules.html#11_1", "1"], 
+     ["11.2 创建模块", "perl/modules.html#11_2", "1", 
+       ["11.2.1 模块私有和输出器", "perl/modules.html#11_2_1", "1", 
+         ["11.2.1.1 不用 Exporter 的输入方法进行输出", "perl/modules.html#11_2_1_1_exporter", "1"], 
+         ["11.2.1.2 版本检查", "perl/modules.html#11_2_1_2", "1"], 
+         ["11.2.1.3 管理未知符号", "perl/modules.html#11_2_1_3", "1"], 
+         ["11.2.1.4 标签绑定工具函数", "perl/modules.html#11_2_1_4", "1"]]], 
+     ["11.3 覆盖内建的函数", "perl/modules.html#11_3", "1"]], 
+   ["第十二章 对象(上)", "perl/objects.html#.html", "1", 
+     ["12.1 简单复习一下面向对象的语言", "perl/objects.html#12_1", "1"], 
+     ["12.2 Perl 的对象系统", "perl/objects.html#12_2_perl", "1"], 
+     ["12.3 方法调用", "perl/objects.html#12_3", "1", 
+       ["12.3.1 使用箭头操作符的方法调用", "perl/objects.html#12_3_1", "1"], 
+       ["12.3.2 使用间接对象的方法调用", "perl/objects.html#12_3_2", "1"], 
+       ["12.3.3 间接对象的句法障碍", "perl/objects.html#12_3_3", "1"], 
+       ["12.3.4 引用包的类", "perl/objects.html#12_3_4", "1"]], 
+     ["12.4 构造对象", "perl/objects.html#12_4", "1", 
+       ["12.4.1 可继承构造器", "perl/objects.html#12_4_1", "1"], 
+       ["12.4.2 初始器", "perl/objects.html#12_4_2", "1"]], 
+     ["12.5 类继承", "perl/objects.html#12_5", "1"]], 
+   ["第十二章 对象(下)", "perl/objects2.html#.html", "1", 
+     [, 
+       ["12.5.1 通过 @ISA 继承", "perl/objects2.html#12_5_1_isa", "1"], 
+       ["12.5.2 访问被覆盖的方法", "perl/objects2.html#12_5_2", "1"], 
+       ["12.5.3 UNIVERSAL：最终的祖先类", "perl/objects2.html#12_5_3_universal", "1"], 
+       ["12.5.4 方法自动装载", "perl/objects2.html#12_5_4", "1"], 
+       ["12.5.5 私有方法", "perl/objects2.html#12_5_5", "1"]], 
+     ["12.6 实例析构器", "perl/objects2.html#12_6", "1", 
+       ["12.6.1 用 DESTROY 方法进行垃圾收集", "perl/objects2.html#12_6_1_destroy", "1"]], 
+     ["12.7 管理实例数据", "perl/objects2.html#12_7", "1", 
+       ["12.7.1 用 use fields 定义的域", "perl/objects2.html#12_7_1_use_fields", "1"], 
+       ["12.7.2 用 Class::Struct 生成类", "perl/objects2.html#12_7_2_class_struct", "1"], 
+       ["12.7.3使用 Autoloading（自动装载）生成指示器", "perl/objects2.html#12_7_3_autoloading", "1"], 
+       ["12.7.4 用闭合域生成指示器", "perl/objects2.html#12_7_4", "1"], 
+       ["12.7.5 将闭合域用于私有对象", "perl/objects2.html#12_7_5", "1"], 
+       ["12.7.6 新技巧", "perl/objects2.html#12_7_6", "1"]], 
+     ["12.8 管理类数据", "perl/objects2.html#12_8", "1"], 
+     ["12.9 总结", "perl/objects2.html#12_9", "1"]], 
+   ["第十三章， 重载", "perl/overloading.html#.html", "1", 
+     ["13.1 overload 用法", "perl/overloading.html#13_1_overload", "1"], 
+     ["13.3 可重载操作符", "perl/overloading.html#13_3", "1"], 
+     ["13.4 拷贝构造器（=）", "perl/overloading.html#13_4", "1"], 
+     ["13.5 当缺失重载句柄的时候（nomethod 和 fallback）", "perl/overloading.html#13_5_nomethod_fallback", "1"], 
+     ["13.6 重载常量", "perl/overloading.html#13_6", "1"], 
+     ["13.7 公共重载函数", "perl/overloading.html#13_7", "1"], 
+     ["13.8 继承和重载", "perl/overloading.html#13_8", "1"], 
+     ["13.9 运行时重载", "perl/overloading.html#13_9", "1"], 
+     ["13.10 重载诊断", "perl/overloading.html#13_10", "1"]], 
+   ["第十四章  捆绑(tie)变量", "perl/tiedvariables.html#tie", "1", 
+     ["14.1 捆绑标量", "perl/tiedvariables.html#14_1", "1", 
+       ["14.1.1 标量捆绑方法", "perl/tiedvariables.html#14_1_1", "1"], 
+       ["14.1.2 魔术计数变量", "perl/tiedvariables.html#14_1_2", "1"], 
+       ["14.1.3 神奇地消除 $_", "perl/tiedvariables.html#14_1_3", "1"]], 
+     ["14.2 捆绑数组", "perl/tiedvariables.html#14_2", "1", 
+       ["14.2.1数组捆绑方法", "perl/tiedvariables.html#14_2_1", "1"], 
+       ["14.2.2 大家方便", "perl/tiedvariables.html#14_2_2", "1"]]], 
+   ["第十四章 捆绑(tie)变量(下)", "perl/tiedvariablesii.html#tie", "1", 
+     ["14.3 捆绑散列", "perl/tiedvariablesii.html#14_3", "1", 
+       ["14.3.1散列捆绑方法", "perl/tiedvariablesii.html#14_3_1", "1"]], 
+     ["14.4捆绑文件句柄", "perl/tiedvariablesii.html#14_4", "1", 
+       ["14.4.1 文件句柄捆绑方法", "perl/tiedvariablesii.html#14_4_1", "1"], 
+       ["14.4.2创建文件句柄", "perl/tiedvariablesii.html#14_4_2", "1"]], 
+     ["14.5 一个精细的松绑陷阱", "perl/tiedvariablesii.html#14_5", "1"], 
+     ["14.6 CPAN 里的模块", "perl/tiedvariablesii.html#14_6_cpan", "1"]], 
+   ["第十五章  Unicode", "perl/perlunicode.html#unicode", "1", 
+     ["15.1 制作字符", "perl/perlunicode.html#15_1", "1"], 
+     ["15.2 字符语意的效果", "perl/perlunicode.html#15_2", "1"]], 
+   ["第十六章，进程间通讯", "perl/perlicommunication.html#.html", "1", 
+     ["16.1 信号", "perl/perlicommunication.html#16_1", "1", 
+       ["16.1.1 给进程组发信号", "perl/perlicommunication.html#16_1_1", "1"], 
+       ["16.1.2 收割僵死进程", "perl/perlicommunication.html#16_1_2", "1"], 
+       ["16.1.3 给慢速操作调速", "perl/perlicommunication.html#16_1_3", "1"], 
+       ["16.1.4 阻塞信号", "perl/perlicommunication.html#16_1_4", "1"]], 
+     ["16.2 文件", "perl/perlicommunication.html#16_2", "1", 
+       ["16.2.1 文件锁定", "perl/perlicommunication.html#16_2_1", "1"], 
+       ["16.2.2 传递文件句柄", "perl/perlicommunication.html#16_2_2", "1"]], 
+     ["16.3 管道", "perl/perlicommunication.html#16_3", "1", 
+       ["16.3.1 匿名管道", "perl/perlicommunication.html#16_3_1", "1"], 
+       ["16.3.2 自言自语", "perl/perlicommunication.html#16_3_2", "1"], 
+       ["16.3.3 双向通讯", "perl/perlicommunication.html#16_3_3", "1"], 
+       ["16.3.4 命名管道", "perl/perlicommunication.html#16_3_4", "1"]], 
+     ["16.4. System V IPC", "perl/perlicommunication.html#16_4_system_v_ipc", "1"], 
+     ["16.5. 套接字", "perl/perlicommunication.html#16_5", "1", 
+       ["16.5.1 网络客户端程序", "perl/perlicommunication.html#16_5_1", "1"], 
+       ["16.5.2 网络服务器", "perl/perlicommunication.html#16_5_2", "1"], 
+       ["16.5.3 消息传递", "perl/perlicommunication.html#16_5_3", "1"]]], 
+   ["第十七章，线程", "perl/perlthread.html#.html", "1", 
+     ["17.1 进程模型", "perl/perlthread.html#17_1", "1"], 
+     ["17.2 线程模型", "perl/perlthread.html#17_2", "1", 
+       ["17.2.1 线程模块", "perl/perlthread.html#17_2_1", "1", 
+         ["17.2.1.1 创建线程", "perl/perlthread.html#17_2_1_1", "1"], 
+         ["17.2.1.2 线程删除", "perl/perlthread.html#17_2_1_2", "1"], 
+         ["17.2.1.3 捕获来自 join 的例外", "perl/perlthread.html#17_2_1_3_join", "1"], 
+         ["17.2.1.4 detach 方法", "perl/perlthread.html#17_2_1_4_detach", "1"], 
+         ["17.2.1.5 标识线程", "perl/perlthread.html#17_2_1_5", "1"], 
+         ["17.2.1.6 列出当前线程", "perl/perlthread.html#17_2_1_6", "1"], 
+         ["17.2.1.7 交出处理器", "perl/perlthread.html#17_2_1_7", "1"]], 
+       ["17.2.2 数据访问", "perl/perlthread.html#17_2_2", "1", 
+         ["17.2.2.1 用 lock 进行访问同步", "perl/perlthread.html#17_2_2_1_lock", "1"], 
+         ["17.2.2.2 死锁", "perl/perlthread.html#17_2_2_2", "1"], 
+         ["17.2.2.3 锁定子过程", "perl/perlthread.html#17_2_2_3", "1"], 
+         ["17.2.2.4 locked 属性", "perl/perlthread.html#17_2_2_4_locked", "1"], 
+         ["17.2.2.5. 锁定方法", "perl/perlthread.html#17_2_2_5", "1"], 
+         ["17.2.2.6 条件变量", "perl/perlthread.html#17_2_2_6", "1"]], 
+       ["17.2.3 其他线程模块", "perl/perlthread.html#17_2_3", "1", 
+         ["17.2.3.1 队列（queue）", "perl/perlthread.html#17_2_3_1_queue", "1"], 
+         ["17.2.3.2. 信号灯", "perl/perlthread.html#17_2_3_2", "1"], 
+         ["17.2.3.3 其他标准线程模块", "perl/perlthread.html#17_2_3_3", "1"]]]], 
+   ["第十八章 编译", "perl/perlcompiling.html#.html", "1", 
+     ["18.1. Perl 程序的生命周期", "perl/perlcompiling.html#18_1_perl", "1"], 
+     ["18.2 编译你的代码", "perl/perlcompiling.html#18_2", "1"], 
+     ["18.3 执行你的代码", "perl/perlcompiling.html#18_3", "1"], 
+     ["18.4编译器后端", "perl/perlcompiling.html#18_4", "1"], 
+     ["18.5 代码生成器", "perl/perlcompiling.html#18_5", "1", 
+       ["18.5.1 字节码生成器", "perl/perlcompiling.html#18_5_1", "1"], 
+       ["18.5.2. C 代码生成器", "perl/perlcompiling.html#18_5_2_c", "1"]], 
+     ["18.7提前编译，回头解释", "perl/perlcompiling.html#18_7", "1"]], 
+   ["第十九章，命令行接口", "perl/perlthecommandlineinterface.html#.html", "1", 
+     ["19.1 命令行处理", "perl/perlthecommandlineinterface.html#19_1", "1"], 
+     ["19.1.1 在非 Unix 系统上的 #! 和引号", "perl/perlthecommandlineinterface.html#19_1_1_unix", "1"], 
+     ["19.1.2 Perl 的位置", "perl/perlthecommandlineinterface.html#19_1_2_perl", "1"], 
+     ["19.1.3 开关", "perl/perlthecommandlineinterface.html#19_1_3", "1"]], 
+   ["19.2 环境变量", "perl/perlthecommandlineinterface.html#19_2", "1"], 
+   ["第二十章 Perl 调试器", "perl/perldebuger.html#perl", "1", 
+     ["20.1 使用调试器", "perl/perldebuger.html#20_1", "1"], 
+     ["20.2 调试器命令", "perl/perldebuger.html#20_2", "1", 
+       ["20.2.1 部件和运行", "perl/perldebuger.html#20_2_1", "1"], 
+       ["20.2.2. 断点", "perl/perldebuger.html#20_2_2", "1"], 
+       ["20.2.3 跟踪", "perl/perldebuger.html#20_2_3", "1"], 
+       ["20.2.4 显示", "perl/perldebuger.html#20_2_4", "1"], 
+       ["20.2.5 定位代码", "perl/perldebuger.html#20_2_5", "1"], 
+       ["20.2.6 动作和命令执行", "perl/perldebuger.html#20_2_6", "1"], 
+       ["20.2.7 杂项命令", "perl/perldebuger.html#20_2_7", "1"]], 
+     ["20.3 客户化调试器", "perl/perldebuger.html#20_3", "1", 
+       ["20.3.1 调试器的编辑器支持", "perl/perldebuger.html#20_3_1", "1"], 
+       ["20.3.2 用 init 文件进行客户化", "perl/perldebuger.html#20_3_2_init", "1"], 
+       ["20.3.3 调试器选项", "perl/perldebuger.html#20_3_3", "1"]], 
+     ["20.4 不被注意的执行", "perl/perldebuger.html#20_4", "1"], 
+     ["调试器支持", "perl/perldebuger.html#.html", "1", 
+       ["20.5.1 书写你自己的调试器", "perl/perldebuger.html#20_5_1", "1"]], 
+     ["20.6 Perl 调节器", "perl/perldebuger.html#20_6_perl", "1"]], 
+   ["第二十一章 内部和外部", "perl/perlinternalsandexternals.html", "1"], 
+   ["第二十二章 CPAN", "perl/perlculture_cpan.html", "1"], 
+   ["第二十三章 安全", "perl/perlculture_security.html#.html", "1", 
+     ["23.1 处理不安全数据", "perl/perlculture_security.html#23_1", "1", 
+       ["23.1.1 侦测和消毒感染了的数据", "perl/perlculture_security.html#23_1_1", "1"], 
+       ["23.1.2. 清理你的环境", "perl/perlculture_security.html#23_1_2", "1"], 
+       ["23.1.3 在受限制的权限下访问命令和文件", "perl/perlculture_security.html#23_1_3", "1"]], 
+     ["23.2. 处理计时缝隙", "perl/perlculture_security.html#23_2", "1", 
+       ["23.2.1. Unix 内核安全臭虫", "perl/perlculture_security.html#23_2_1_unix", "1"], 
+       ["23.2.2处理冲突条件", "perl/perlculture_security.html#23_2_2", "1"], 
+       ["23.2.3. 临时文件", "perl/perlculture_security.html#23_2_3", "1"]], 
+     ["23.3 处理不安全的代码", "perl/perlculture_security.html#23_3", "1", 
+       ["23.3.1.安全隔仓", "perl/perlculture_security.html#23_3_1", "1", 
+         ["23.3.1.1. 限制名字空间访问", "perl/perlculture_security.html#23_3_1_1", "1"], 
+         ["23.3.1.2. 限制对操作符的访问", "perl/perlculture_security.html#23_3_1_2", "1"], 
+         ["23.3.1.3 安全例子", "perl/perlculture_security.html#23_3_1_3", "1"]], 
+       ["23.3.2 伪装成数据的代码", "perl/perlculture_security.html#23_3_2", "1"]]], 
+   ["第二十四章，普通实践", "perl/perlculture_normalpratice.html#.html", "1", 
+     ["24.1. 新手常见错误", "perl/perlculture_normalpratice.html#24_1", "1", 
+       ["24.1.1. 全局失误", "perl/perlculture_normalpratice.html#24_1_1", "1"], 
+       ["24.1.2. 常被遗忘的建议", "perl/perlculture_normalpratice.html#24_1_2", "1"], 
+       ["24.1.3. C 陷阱", "perl/perlculture_normalpratice.html#24_1_3_c", "1"], 
+       ["24.1.4. shell 陷阱", "perl/perlculture_normalpratice.html#24_1_4_shell", "1"], 
+       ["24.1.5. 从前版本的 Perl 陷阱", "perl/perlculture_normalpratice.html#24_1_5_perl", "1"]], 
+     ["24.2 效率", "perl/perlculture_normalpratice.html#24_2", "1"], 
+     ["24.3 时间效率", "perl/perlculture_normalpratice.html#24_3", "1", 
+       ["24.2.2. 空间效率", "perl/perlculture_normalpratice.html#24_2_2", "1"], 
+       ["24.2.3 程序员效率", "perl/perlculture_normalpratice.html#24_2_3", "1"], 
+       ["24.2.4 维护人员效率", "perl/perlculture_normalpratice.html#24_2_4", "1"], 
+       ["24.2.5. 移植人员效率", "perl/perlculture_normalpratice.html#24_2_5", "1"], 
+       ["24.2.6. 用户效率", "perl/perlculture_normalpratice.html#24_2_6", "1"]], 
+     ["24.3有风格地编程", "perl/perlculture_normalpratice.html#24_3", "1"], 
+     ["24.4.  用 => 代替逗号，只要你认为这样可以改善可读性：", "perl/perlculture_normalpratice.html#24_4", "1"], 
+     ["24.5. 生成程序", "perl/perlculture_normalpratice.html#24_5", "1", 
+       ["24.5.2 在其他语言里生成 Perl", "perl/perlculture_normalpratice.html#24_5_2_perl", "1"], 
+       ["24.5.3.  源程序过滤器", "perl/perlculture_normalpratice.html#24_5_3", "1"]]], 
+   ["第二十五章，可移植的 Perl", "perl/perlculture_portableperl.html#perl", "1", 
+     ["25.1. 换行", "perl/perlculture_portableperl.html#25_1", "1"], 
+     ["25.2. 权重（字节序）和数字宽度", "perl/perlculture_portableperl.html#25_2", "1"], 
+     ["25.3. 文件和文件系统", "perl/perlculture_portableperl.html#25_3", "1"], 
+     ["25.6.  外部子过程（XS）", "perl/perlculture_portableperl.html#25_6_xs", "1"], 
+     ["25.7 标准模块", "perl/perlculture_portableperl.html#25_7", "1"], 
+     ["25.8. 日期和时间", "perl/perlculture_portableperl.html#25_8", "1"], 
+     ["25.9 国际化", "perl/perlculture_portableperl.html#25_9", "1"], 
+     ["25.10. 风格", "perl/perlculture_portableperl.html#25_10", "1"]], 
+   ["第二十六章，简单旧文档", "perl/perlculture_plainolddoc.html#.html", "1", 
+     ["26.1  pod in a NutShell", "perl/perlculture_plainolddoc.html#26_1_pod_in_a_nutshell", "1", 
+       ["26.1.1. 字面段落", "perl/perlculture_plainolddoc.html#26_1_1", "1"], 
+       ["26.1.2.  pod 指示符", "perl/perlculture_plainolddoc.html#26_1_2_pod", "1"], 
+       ["26.1.3 Pod 序列", "perl/perlculture_plainolddoc.html#26_1_3_pod", "1"]]], 
+   ["! /usr/bin/perl -l00n", "perl/perlculture_plainolddoc.html#usr_bin_perl_l00n", "1"], 
+   ["olpod - outline pod", "perl/perlculture_plainolddoc.html#olpod_outline_pod", "1"], 
+   ["! /usr/bin/perl -00", "perl/perlculture_plainolddoc.html#usr_bin_perl_00", "1"], 
+   ["catpod - cat out just the pods", "perl/perlculture_plainolddoc.html#catpod_cat_out_just_the_pods", "1"], 
+   ["! /usr/bin/perl -n00", "perl/perlculture_plainolddoc.html#usr_bin_perl_n00", "1"], 
+   ["podlit - print the indented literal blocks from pod input", "perl/perlculture_plainolddoc.html#podlit_print_the_indented_litera", "1"], 
+   ["! /usr/bin/perl", "perl/perlculture_plainolddoc.html#usr_bin_perl", "1"], 
+   ["catpod2, class and program", "perl/perlculture_plainolddoc.html#catpod2_class_and_program", "1"], 
+   ["第二十七章，Perl 文化", "perl/perlculture_culture.html#perl", "1", 
+     ["27.1.时势造英雄", "perl/perlculture_culture.html#27_1", "1"], 
+     ["27.2 Perl 诗歌", "perl/perlculture_culture.html#27_2_perl", "1"]], 
+   ["第二十八章 特殊名字", "perl/perlreference_specialname.html", "1"], 
+   ["第二十九章，函数 （A-D）", "perl/perlreference_functions.html#a_d", "1", 
+     ["29.1 按类分的 Perl 函数", "perl/perlreference_functions.html#29_1_perl", "1"], 
+     ["29.2 按照字母顺序排列的 Perl 函数", "perl/perlreference_functions.html#29_2_perl", "1"]], 
+   ["第二十九章，函数 （E-N）", "perl/perreference_functions1.html#e_n", "1", 
+     ["29.2 按照字母顺序排列的 Perl 函数", "perl/perreference_functions1.html#29_2_perl", "1", 
+       ["29.2.30 each", "perl/perreference_functions1.html#29_2_30_each", "1"], 
+       ["29.2.31 eof", "perl/perreference_functions1.html#29_2_31_eof", "1"], 
+       ["29.2.32 eval", "perl/perreference_functions1.html#29_2_32_eval", "1"], 
+       ["29.2.33 exec", "perl/perreference_functions1.html#29_2_33_exec", "1"], 
+       ["29.2.35 exists", "perl/perreference_functions1.html#29_2_35_exists", "1"], 
+       ["29.2.35 exit", "perl/perreference_functions1.html#29_2_35_exit", "1"], 
+       ["29.2.36 exp", "perl/perreference_functions1.html#29_2_36_exp", "1"], 
+       ["29.2.37. fcntl", "perl/perreference_functions1.html#29_2_37_fcntl", "1"], 
+       ["29.2.38 fileno", "perl/perreference_functions1.html#29_2_38_fileno", "1"], 
+       ["29.2.39 flock", "perl/perreference_functions1.html#29_2_39_flock", "1"], 
+       ["29.2.40 fork", "perl/perreference_functions1.html#29_2_40_fork", "1"], 
+       ["29.2.41 format", "perl/perreference_functions1.html#29_2_41_format", "1"], 
+       ["29.2.42 formline", "perl/perreference_functions1.html#29_2_42_formline", "1"], 
+       ["29.2.43 getc", "perl/perreference_functions1.html#29_2_43_getc", "1"], 
+       ["29.2.44 getgrent", "perl/perreference_functions1.html#29_2_44_getgrent", "1"], 
+       ["29.2.45 getgrgid", "perl/perreference_functions1.html#29_2_45_getgrgid", "1"], 
+       ["29.2.46 getgrnam", "perl/perreference_functions1.html#29_2_46_getgrnam", "1"], 
+       ["29.2.47 gethostbyaddr", "perl/perreference_functions1.html#29_2_47_gethostbyaddr", "1"], 
+       ["29.2.48 gethostbyname", "perl/perreference_functions1.html#29_2_48_gethostbyname", "1"], 
+       ["29.2.49 gethostent", "perl/perreference_functions1.html#29_2_49_gethostent", "1"], 
+       ["29.2.50. getlogin", "perl/perreference_functions1.html#29_2_50_getlogin", "1"], 
+       ["29.2.51 getnetbyaddr", "perl/perreference_functions1.html#29_2_51_getnetbyaddr", "1"], 
+       ["29.2.52 getnetbyname", "perl/perreference_functions1.html#29_2_52_getnetbyname", "1"], 
+       ["29.2.53. getnetent", "perl/perreference_functions1.html#29_2_53_getnetent", "1"], 
+       ["29.2.54.  getpeername", "perl/perreference_functions1.html#29_2_54_getpeername", "1"], 
+       ["29.2.55. getpgrp", "perl/perreference_functions1.html#29_2_55_getpgrp", "1"], 
+       ["29.2.56 getppid", "perl/perreference_functions1.html#29_2_56_getppid", "1"], 
+       ["29.2.57.  getpriority", "perl/perreference_functions1.html#29_2_57_getpriority", "1"], 
+       ["29.2.58 getprotobyname", "perl/perreference_functions1.html#29_2_58_getprotobyname", "1"], 
+       ["29.2.59 getprotobynumber", "perl/perreference_functions1.html#29_2_59_getprotobynumber", "1"], 
+       ["29.2.60 getprotoent", "perl/perreference_functions1.html#29_2_60_getprotoent", "1"], 
+       ["29.2.61 getpwent", "perl/perreference_functions1.html#29_2_61_getpwent", "1"], 
+       ["29.2.62 getpwnam", "perl/perreference_functions1.html#29_2_62_getpwnam", "1"], 
+       ["29.2.63. getpwuid", "perl/perreference_functions1.html#29_2_63_getpwuid", "1"], 
+       ["29.2.64. getservbyname", "perl/perreference_functions1.html#29_2_64_getservbyname", "1"], 
+       ["29.2.65. getservbyport", "perl/perreference_functions1.html#29_2_65_getservbyport", "1"], 
+       ["29.2.66. getservent", "perl/perreference_functions1.html#29_2_66_getservent", "1"], 
+       ["29.2.67. getsockname", "perl/perreference_functions1.html#29_2_67_getsockname", "1"], 
+       ["29.2.68. getsockopt", "perl/perreference_functions1.html#29_2_68_getsockopt", "1"], 
+       ["29.2.69 glob", "perl/perreference_functions1.html#29_2_69_glob", "1"], 
+       ["29.2.70. gmtime", "perl/perreference_functions1.html#29_2_70_gmtime", "1"], 
+       ["29.2.71.  goto", "perl/perreference_functions1.html#29_2_71_goto", "1"], 
+       ["29.2.72. grep", "perl/perreference_functions1.html#29_2_72_grep", "1"], 
+       ["29.2.73. hex", "perl/perreference_functions1.html#29_2_73_hex", "1"], 
+       ["29.2.74 import", "perl/perreference_functions1.html#29_2_74_import", "1"], 
+       ["29.2.75. index", "perl/perreference_functions1.html#29_2_75_index", "1"], 
+       ["29.2.76. int", "perl/perreference_functions1.html#29_2_76_int", "1"], 
+       ["29.2.77.  ioctl", "perl/perreference_functions1.html#29_2_77_ioctl", "1"], 
+       ["29.2.78. join", "perl/perreference_functions1.html#29_2_78_join", "1"], 
+       ["29.2.79 keys", "perl/perreference_functions1.html#29_2_79_keys", "1"], 
+       ["29.2.80. kill", "perl/perreference_functions1.html#29_2_80_kill", "1"], 
+       ["29.2.81. last", "perl/perreference_functions1.html#29_2_81_last", "1"], 
+       ["29.2.82. lc", "perl/perreference_functions1.html#29_2_82_lc", "1"], 
+       ["29.2.83 lcfirst", "perl/perreference_functions1.html#29_2_83_lcfirst", "1"], 
+       ["29.2.84. length", "perl/perreference_functions1.html#29_2_84_length", "1"], 
+       ["29.2.85. link", "perl/perreference_functions1.html#29_2_85_link", "1"], 
+       ["29.2.86. listen", "perl/perreference_functions1.html#29_2_86_listen", "1"], 
+       ["29.2.87. local", "perl/perreference_functions1.html#29_2_87_local", "1"], 
+       ["29.2.88.  localtime", "perl/perreference_functions1.html#29_2_88_localtime", "1"], 
+       ["29.2.89 lock", "perl/perreference_functions1.html#29_2_89_lock", "1"], 
+       ["29.2.90. log", "perl/perreference_functions1.html#29_2_90_log", "1"], 
+       ["29.2.91. lstat", "perl/perreference_functions1.html#29_2_91_lstat", "1"], 
+       ["29.2.92. m//", "perl/perreference_functions1.html#29_2_92_m", "1"], 
+       ["29.2.93.  map", "perl/perreference_functions1.html#29_2_93_map", "1"], 
+       ["29.2.94. mkdir", "perl/perreference_functions1.html#29_2_94_mkdir", "1"], 
+       ["29.2.95.  msgctl", "perl/perreference_functions1.html#29_2_95_msgctl", "1"], 
+       ["29.2.96. msgget", "perl/perreference_functions1.html#29_2_96_msgget", "1"], 
+       ["29.2.97. msgrcv", "perl/perreference_functions1.html#29_2_97_msgrcv", "1"], 
+       ["29.2.98.  msgsnd", "perl/perreference_functions1.html#29_2_98_msgsnd", "1"], 
+       ["29.2.99. my", "perl/perreference_functions1.html#29_2_99_my", "1"], 
+       ["29.2.100. new", "perl/perreference_functions1.html#29_2_100_new", "1"], 
+       ["29.2.101. next", "perl/perreference_functions1.html#29_2_101_next", "1"], 
+       ["29.2.102. no", "perl/perreference_functions1.html#29_2_102_no", "1"]]], 
+   ["第二十九章，函数 （O-Y）", "perl/perlreference_functions2.html#o_y", "1", 
+     ["29.2 按照字母顺序排列的 Perl 函数", "perl/perlreference_functions2.html#29_2_perl", "1", 
+       ["29.2.103. oct", "perl/perlreference_functions2.html#29_2_103_oct", "1"], 
+       ["29.2.103 open", "perl/perlreference_functions2.html#29_2_103_open", "1"], 
+       ["29.2.105 opendir", "perl/perlreference_functions2.html#29_2_105_opendir", "1"], 
+       ["29.2.106 ord", "perl/perlreference_functions2.html#29_2_106_ord", "1"], 
+       ["29.2.107 our", "perl/perlreference_functions2.html#29_2_107_our", "1"], 
+       ["29.2.108. pack", "perl/perlreference_functions2.html#29_2_108_pack", "1"], 
+       ["29.2.109. package", "perl/perlreference_functions2.html#29_2_109_package", "1"], 
+       ["29.2.110 pipe", "perl/perlreference_functions2.html#29_2_110_pipe", "1"], 
+       ["29.2.111. pop", "perl/perlreference_functions2.html#29_2_111_pop", "1"], 
+       ["29.2.112 pos", "perl/perlreference_functions2.html#29_2_112_pos", "1"], 
+       ["29.2.113 print", "perl/perlreference_functions2.html#29_2_113_print", "1"], 
+       ["29.2.114 printf", "perl/perlreference_functions2.html#29_2_114_printf", "1"], 
+       ["29.2.115.  prototype", "perl/perlreference_functions2.html#29_2_115_prototype", "1"], 
+       ["29.2.116 push", "perl/perlreference_functions2.html#29_2_116_push", "1"], 
+       ["29.2.117.  q/STRING/", "perl/perlreference_functions2.html#29_2_117_q_string", "1"], 
+       ["29.2.118. quotemeta", "perl/perlreference_functions2.html#29_2_118_quotemeta", "1"], 
+       ["29.2.119 rand", "perl/perlreference_functions2.html#29_2_119_rand", "1"], 
+       ["29.2.120 read", "perl/perlreference_functions2.html#29_2_120_read", "1"], 
+       ["29.2.121. readdir", "perl/perlreference_functions2.html#29_2_121_readdir", "1"], 
+       ["29.2.122 readline", "perl/perlreference_functions2.html#29_2_122_readline", "1"], 
+       ["29.2.123 readlink", "perl/perlreference_functions2.html#29_2_123_readlink", "1"], 
+       ["29.2.124. readpipe", "perl/perlreference_functions2.html#29_2_124_readpipe", "1"], 
+       ["29.2.125 recv", "perl/perlreference_functions2.html#29_2_125_recv", "1"], 
+       ["29.2.126 redo", "perl/perlreference_functions2.html#29_2_126_redo", "1"], 
+       ["29.2.127 ref", "perl/perlreference_functions2.html#29_2_127_ref", "1"], 
+       ["29.2.128 rename", "perl/perlreference_functions2.html#29_2_128_rename", "1"], 
+       ["29.2.129 require", "perl/perlreference_functions2.html#29_2_129_require", "1"], 
+       ["29.2.130 reset", "perl/perlreference_functions2.html#29_2_130_reset", "1"], 
+       ["29.2.131. return", "perl/perlreference_functions2.html#29_2_131_return", "1"], 
+       ["29.2.132 reverse", "perl/perlreference_functions2.html#29_2_132_reverse", "1"], 
+       ["29.2.133. rewinddir", "perl/perlreference_functions2.html#29_2_133_rewinddir", "1"], 
+       ["29.2.134. rindex", "perl/perlreference_functions2.html#29_2_134_rindex", "1"], 
+       ["29.2.135. rmdir", "perl/perlreference_functions2.html#29_2_135_rmdir", "1"]]], 
+   ["第二十九章，函数 （S-Y）", "perl/perlreference_functions3.html#s_y", "1", 
+     ["29.2 按照字母顺序排列的 Perl 函数.", "perl/perlreference_functions3.html#29_2_perl", "1", 
+       ["29.2.136 s///", "perl/perlreference_functions3.html#29_2_136_s", "1"], 
+       ["29.2.137. scalar", "perl/perlreference_functions3.html#29_2_137_scalar", "1"], 
+       ["29.2.138 seek", "perl/perlreference_functions3.html#29_2_138_seek", "1"], 
+       ["29.2.139 seekdir", "perl/perlreference_functions3.html#29_2_139_seekdir", "1"], 
+       ["29.2.140 select (输出文件句柄)", "perl/perlreference_functions3.html#29_2_140_select", "1"], 
+       ["29.2.141 select (准备文件描述符)", "perl/perlreference_functions3.html#29_2_141_select", "1"], 
+       ["29.2.142 semctl", "perl/perlreference_functions3.html#29_2_142_semctl", "1"], 
+       ["29.2.143 semget", "perl/perlreference_functions3.html#29_2_143_semget", "1"], 
+       ["29.2.144 semop", "perl/perlreference_functions3.html#29_2_144_semop", "1"], 
+       ["29.2.145 send", "perl/perlreference_functions3.html#29_2_145_send", "1"], 
+       ["29.2.146. setpgrp", "perl/perlreference_functions3.html#29_2_146_setpgrp", "1"], 
+       ["29.2.147. setpriority", "perl/perlreference_functions3.html#29_2_147_setpriority", "1"], 
+       ["29.2.148. setsockopt", "perl/perlreference_functions3.html#29_2_148_setsockopt", "1"], 
+       ["29.2.149 shift", "perl/perlreference_functions3.html#29_2_149_shift", "1"], 
+       ["29.2.150 shmctl", "perl/perlreference_functions3.html#29_2_150_shmctl", "1"], 
+       ["29.2.151 shmget", "perl/perlreference_functions3.html#29_2_151_shmget", "1"], 
+       ["29.2.152 shmread", "perl/perlreference_functions3.html#29_2_152_shmread", "1"], 
+       ["29.2.153 shmwrite", "perl/perlreference_functions3.html#29_2_153_shmwrite", "1"], 
+       ["29.2.154 shutdown", "perl/perlreference_functions3.html#29_2_154_shutdown", "1"], 
+       ["29.2.155. sin", "perl/perlreference_functions3.html#29_2_155_sin", "1"], 
+       ["29.2.156 sleep", "perl/perlreference_functions3.html#29_2_156_sleep", "1"], 
+       ["29.2.157 socket", "perl/perlreference_functions3.html#29_2_157_socket", "1"], 
+       ["29.2.158 socketpair", "perl/perlreference_functions3.html#29_2_158_socketpair", "1"], 
+       ["29.2.159 sort", "perl/perlreference_functions3.html#29_2_159_sort", "1"], 
+       ["29.2.160 splice", "perl/perlreference_functions3.html#29_2_160_splice", "1"], 
+       ["29.2.161 spit", "perl/perlreference_functions3.html#29_2_161_spit", "1"], 
+       ["29.2.162. sprintf", "perl/perlreference_functions3.html#29_2_162_sprintf", "1"], 
+       ["29.2.163 sqrt", "perl/perlreference_functions3.html#29_2_163_sqrt", "1"], 
+       ["29.2.164.   srand", "perl/perlreference_functions3.html#29_2_164_srand", "1"], 
+       ["29.2.165. stat", "perl/perlreference_functions3.html#29_2_165_stat", "1"], 
+       ["29.2.166.  study", "perl/perlreference_functions3.html#29_2_166_study", "1"], 
+       ["29.2.167 sub", "perl/perlreference_functions3.html#29_2_167_sub", "1"], 
+       ["29.2.168.  substr", "perl/perlreference_functions3.html#29_2_168_substr", "1"], 
+       ["29.2.169.  symlink", "perl/perlreference_functions3.html#29_2_169_symlink", "1"], 
+       ["29.2.170 syscall", "perl/perlreference_functions3.html#29_2_170_syscall", "1"], 
+       ["29.2.171 sysopen", "perl/perlreference_functions3.html#29_2_171_sysopen", "1"], 
+       ["29.2.172 sysread", "perl/perlreference_functions3.html#29_2_172_sysread", "1"], 
+       ["29.2.173 sysseek", "perl/perlreference_functions3.html#29_2_173_sysseek", "1"], 
+       ["29.2.174 system", "perl/perlreference_functions3.html#29_2_174_system", "1"], 
+       ["29.2.175 syswrite", "perl/perlreference_functions3.html#29_2_175_syswrite", "1"], 
+       ["29.2.176 tell", "perl/perlreference_functions3.html#29_2_176_tell", "1"], 
+       ["29.2.177.  telldir", "perl/perlreference_functions3.html#29_2_177_telldir", "1"], 
+       ["29.2.177. tie", "perl/perlreference_functions3.html#29_2_177_tie", "1"], 
+       ["29.2.179  tied", "perl/perlreference_functions3.html#29_2_179_tied", "1"], 
+       ["29.2.180. time", "perl/perlreference_functions3.html#29_2_180_time", "1"], 
+       ["29.2.181 times", "perl/perlreference_functions3.html#29_2_181_times", "1"], 
+       ["29.2.182 tr///", "perl/perlreference_functions3.html#29_2_182_tr", "1"], 
+       ["29.2.182 truncate", "perl/perlreference_functions3.html#29_2_182_truncate", "1"], 
+       ["29.2.183  uc", "perl/perlreference_functions3.html#29_2_183_uc", "1"], 
+       ["29.2.184 ucfirst", "perl/perlreference_functions3.html#29_2_184_ucfirst", "1"], 
+       ["29.2.186 umask", "perl/perlreference_functions3.html#29_2_186_umask", "1"], 
+       ["29.2.186 undef", "perl/perlreference_functions3.html#29_2_186_undef", "1"], 
+       ["29.2.188. unlink", "perl/perlreference_functions3.html#29_2_188_unlink", "1"], 
+       ["29.2.189. unpack", "perl/perlreference_functions3.html#29_2_189_unpack", "1"], 
+       ["29.2.190.  unshift", "perl/perlreference_functions3.html#29_2_190_unshift", "1"], 
+       ["29.2.190.  untie", "perl/perlreference_functions3.html#29_2_190_untie", "1"], 
+       ["29.2.190.  use", "perl/perlreference_functions3.html#29_2_190_use", "1"], 
+       ["29.2.193  utime", "perl/perlreference_functions3.html#29_2_193_utime", "1"], 
+       ["29.2.194. values", "perl/perlreference_functions3.html#29_2_194_values", "1"], 
+       ["29.2.195 vec", "perl/perlreference_functions3.html#29_2_195_vec", "1"], 
+       ["29.2.196.  wait", "perl/perlreference_functions3.html#29_2_196_wait", "1"], 
+       ["29.2.197.  waitpid", "perl/perlreference_functions3.html#29_2_197_waitpid", "1"], 
+       ["29.2.198. wantarray", "perl/perlreference_functions3.html#29_2_198_wantarray", "1"], 
+       ["29.2.199  warn", "perl/perlreference_functions3.html#29_2_199_warn", "1"], 
+       ["29.2.200. write", "perl/perlreference_functions3.html#29_2_200_write", "1"], 
+       ["29.2.201 y//", "perl/perlreference_functions3.html#29_2_201_y", "1"]]]]
+];
+
+var w=window,d=document
+var icons={'0'  : 'icons/0.gif','1'  : 'icons/90.gif',
+        '2'  : 'icons/91.gif', '3'  : 'icons/92.gif', '4'  : 'icons/99.gif',
+        '18' : 'icons/93.gif', '19' : 'icons/94.gif', '20' : 'icons/97.gif',
+        '26' : 'icons/95.gif', '27' : 'icons/96.gif', '28' : 'icons/98.gif'}
+
+var dhtml=true
+try{if(d.body.innerHTML.length<=0)dhtml=false}
+catch(e){dhtml=false;}
+var tree=[];
+
+get_element=d.all ? 
+     function(id){return d.all[id]}
+     : 
+     function(id){return d.getElementById(id)}
+
+function get_img1(){
+    return icons[((this.childs.length ? 16 : 0)+(this.childs.length && this.opened ? 8 : 0)+(this.is_last()? 1 : 0)+(this.is_first()? 2 : 0)+2)]
+}
+function get_img2(){
+    n=this.cnt[2]
+    if(n<9){    
+	n=(this.opened ? ( n%2 ? parseInt(n)+1 : n ) : ( n%2 ? n : parseInt(n)-1 ))
+    }
+    return 'icons/'+n+'.gif'
+}
+function node(tree,n){
+    this.ind=tree.ind+1
+    this.cnt=tree.cnt[n+(this.ind ? 3 : 0)]
+    if(!this.cnt)return
+    this.tree=tree.tree
+    this.parent=tree
+    this.opened=!dhtml
+    this.nind=this.tree.nodes.length
+    this.tree.nodes[this.nind]=this
+    tree.childs[n]=this
+    this.childs=[]
+    for(var i=0;i < this.cnt.length - 2;i++)
+	new node(this,i)
+    this.get_img1=get_img1
+    this.get_img2=get_img2
+    this.open=open
+    this.select=select
+    this.init=init
+    this.is_last=function(){
+	return n==this.parent.childs.length - 1
+    }
+    this.is_first=function(){
+	return(this.ind==0)&&(n==0)&&(!this.is_last())
+    }
+}
+
+function open(){
+    var childs=[]
+    var el=get_element('divCont'+this.nind)
+    if(!el)return
+    if(!dhtml){
+	d.write(childs.join(''))
+	    for(var i=0;i < this.childs.length;i++){
+	    d.write(this.childs[i].init())
+	    this.childs[i].open()
+	}
+    }
+    else{
+	if(!el.innerHTML){
+	    for(var i=0;i < this.childs.length;i++)
+		childs[i]=this.childs[i].init()
+	    el.innerHTML=childs.join('')
+	}
+	el.style.display=(this.opened ? 'none' : 'block')
+	this.opened=!this.opened
+	var img1=d.images['img1_'+this.nind],img2=d.images['img2_'+this.nind]
+	if(img1)img1.src=this.get_img1()
+	if(img2)img2.src=this.get_img2()
+    }
+}
+
+
+function select(nind){
+    if(!nind){
+	var sel=this.tree.sel
+	this.tree.sel=this
+	if(sel)sel.select(true)
+    }
+    var img2=d.images['img2_'+this.nind]
+    if(img2)img2.src=this.get_img2()
+    get_element('el'+this.nind).style.fontWeight=nind ? 'normal' : 'bold'
+    return Boolean(this.cnt[1])
+}
+
+function init(){
+    var temp=[],par=this.parent
+    for(var i=this.ind;i>0;i--){
+	temp[i]='<img src="'+icons[par.is_last()? 0 : 1]+'" border="0" align="absbottom">'
+	par=par.parent
+    }
+    r='<table cellpadding="0" cellspacing="0" border="0">'
+    r+='<tr><td nowrap>'
+    r+=temp.join('')
+    r+=(this.childs.length ?(!dhtml ? '' : '<a href="javascript: tree.toggle('+this.nind+')" >')+'<img src="'+this.get_img1()+'" border="0" align="absbottom" name="img1_'+this.nind+'">'+(!dhtml ? '' : '</a>'): '<img src="'+this.get_img1()+'" border="0" align="absbottom">')
+    r+='<a href="'+this.cnt[1]+'" target="'+'content'+'"'+' title="'+this.cnt[0]+'" onclick="return tree.select('+this.nind+')" '+(!dhtml ? '' : ' ondblclick="tree.toggle('+this.nind+')"')+' class="small" id="el'+this.nind+'"><img src="'+this.get_img2()+'" border="0" align="absbottom" name="img2_'+this.nind+'">&nbsp;'+this.cnt[0]+'</a>'
+    r+='</td></tr></table>'
+    r+=(this.childs.length ? '<div id="divCont'+this.nind+'" style="display:none"></div>' : '')
+    return r
+}
+
+function draw_contents(cnt){
+    tree=this;
+    tree.cnt=cnt;
+    tree.tree=this;
+    tree.nodes=[];
+    tree.sel=null;
+    tree.ind=-1;
+    
+    tree.select=function(i){
+	return tree.nodes[i].select();
+    };
+    tree.toggle=function(i){
+	tree.nodes[i].open()
+    };
+    tree.childs=[]
+    for(var i=0;i<cnt.length;i++){
+	new node(tree,i)
+    }
+    tree.nind=0;
+    
+    for(var i=0;i < tree.childs.length;i++){
+	d.write(tree.childs[i].init());
+	if(!dhtml)tree.childs[i].open();
+    }
+}
+
+
+function getLoc(){
+var doc = ""+parent.frames[1].location;
+if(doc != lastDoc){
+        var keyVals = new Array();
+        keyVals = doc.split("\/");
+        var targetPage = ""+keyVals[(keyVals.length-1)];
+
+        if(targetPage.indexOf("\#") > 0){
+                targetPage = targetPage.substr(0,targetPage.indexOf("\#"));
+        }
+
+        nodeCount = 0;
+        while( (""+tree.nodes[nodeCount].cnt[1]).lastIndexOf(targetPage) < 0){
+                nodeCount++;
+        }
+        parentNode = tree.nodes[nodeCount].parent;
+                if(parentNode != tree && parentNode.opened == false){
+                        parentNode.open();
+                }
+        tree.nodes[nodeCount].select();
+        lastDoc = doc;
+        }
+}
+new draw_contents(contents);
+</script>
+ </body>
+</html>
